@@ -12,5 +12,18 @@ public class SampleTest {
 		int result = Sample.sum(1, 3);
 		assertThat(result, is(4));
 	}
+	
+	@Test
+	public void testSum2() {
+		int result = Sample.sum(-1, 3);
+		assertThat(result, is(2));
+	}
+	
 
+	@Test
+	public void testSum3() {
+		Sample s = new Sample();
+		int result = s.sum(2, 2);
+		assertThat(result, is(4));
+	}
 }
