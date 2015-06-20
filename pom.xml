@@ -46,6 +46,32 @@
                 <appName>shielded-castle-4861</appName>
               </configuration>
             </plugin>
+            <plugin>
+	          <groupId>de.saumya.mojo</groupId>
+	          <artifactId>gem-maven-plugin</artifactId>
+	          <version>1.0.5</version>
+	          <configuration>
+	            <execArgLines>
+	              <execArgLine>${project.build.directory}/rubygems/bin/travis</execArgLine>
+	              <execArgLine>encrypt</execArgLine>
+	              <execArgLine>HEROKU_API_KEY=065bf742-e4da-4681-b1f4-5f8d97de6e9b</execArgLine>
+	            </execArgLines>
+	          </configuration>
+	          <dependencies>
+	            <dependency>
+	              <groupId>rubygems</groupId>
+	              <artifactId>travis</artifactId>
+	              <version>1.7.1</version>
+	              <type>gem</type>
+	            </dependency>
+	            <dependency>
+	              <groupId>rubygems</groupId>
+	              <artifactId>pry</artifactId>
+	              <version>0.9.12.6</version>
+	              <type>gem</type>
+	            </dependency>
+	          </dependencies>
+        </plugin>
 		</plugins>
 	</build>
 
